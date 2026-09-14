@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cud1uvkd58a2y"]
 
 [ext_resource type="Texture2D" uid="uid://cvvkvus0atpsi" path="res://sprites/gelo.png" id="1_ginwq"]
-[ext_resource type="Script" uid="uid://cg8dhdint5b82" path="res://magia_gelo.gd" id="1_qtf2j"]
+[ext_resource type="Script" uid="uid://cg8dhdint5b82" path="res://scripts/magia_gelo.gd" id="1_qtf2j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bpqth"]
 animations = [{
