@@ -63,13 +63,13 @@ func _physics_process(delta):
 			if not driftatv:
 				rotation.y += 1 * delta
 			else:
-				rotation.y += 1.2 * delta
+				rotation.y += 2 * delta
 
 		if Input.is_action_pressed("direita"):
 			if not driftatv:
 				rotation.y -= 1 * delta
 			else:
-				rotation.y -= 1.2 * delta
+				rotation.y -= 2 * delta
 
 	if Input.is_action_just_pressed("drift") and is_on_floor():
 		vlcMax = 10.0
@@ -122,7 +122,7 @@ func _physics_process(delta):
 				
 	if combo == ["A", "B", "C", "D"] and mana >= 30:
 		mana -= 30
-		spawn("res://magia_gelo.tscn")
+		spawn("res://cenas_obj/magia_gelo.tscn")
 		combo.clear()
 	
 	if combo != []:
