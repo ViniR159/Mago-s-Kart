@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://0sq2axm24kxf"]
+
+[ext_resource type="Script" uid="uid://8aylgmqi1bkv" path="res://scripts/gerador.gd" id="1_8x4te"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ybodu"]
+size = Vector3(1, 0.568, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1buq"]
+albedo_color = Color(0, 0.63333344, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wuvc2"]
+size = Vector3(4.055176, 46.911125, 4.0163574)
+
+[node name="gerador" type="MeshInstance3D" unique_id=1552910330]
+transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 0.5, 0, -0.32580566, 0)
+mesh = SubResource("BoxMesh_ybodu")
+surface_material_override/0 = SubResource("StandardMaterial3D_o1buq")
+script = ExtResource("1_8x4te")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=655881258]
+transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=816329862]
+transform = Transform3D(0.5, 0, 0, 0, 0.19999999, 0, 0, 0, 0.5, -0.0030517578, 3.4936666, 0.010192871)
+shape = SubResource("BoxShape3D_wuvc2")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
-@onready var mapa = $"../StaticBody3D/colisoes"
+@onready var mapa = $"../Mapa/colisoes"
+@onready var vlc_linhgas = $"$effectSpeed/ColorRect"
 
 var gravidade = 15
 
