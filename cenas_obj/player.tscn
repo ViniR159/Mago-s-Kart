@@ -40,7 +40,6 @@ animations = [{
 script = ExtResource("1_onrkg")
 
 [node name="effectSpeed" type="CanvasLayer" parent="." unique_id=1861488467]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="effectSpeed" unique_id=2082203634]
 material = SubResource("ShaderMaterial_ua1nu")

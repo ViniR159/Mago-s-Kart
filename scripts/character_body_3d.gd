@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var mapa = $"../Mapa/colisoes"
-@onready var vlc_linhgas = $"$effectSpeed/ColorRect"
+@onready var vlc_linhas =  $effectSpeed/ColorRect
 
 var gravidade = 15
 
@@ -17,6 +17,7 @@ var drift = 0.5
 var driftatv = false
 var tempo_drift = 0
 var boost = false
+var boost_tempo
 var boot_forca = 20
 
 var combo = []
@@ -34,7 +35,7 @@ func _physics_process(delta):
 	if tile == 0:
 		vlcMax = 15.0
 	
-	if tile == 2:
+	if tile == 1:
 		vlcMax = 7.0
 	
 	if not is_on_floor():
@@ -59,7 +60,7 @@ func _physics_process(delta):
 				0,
 				freiagem * delta
 			)
-
+	
 		if Input.is_action_pressed("esquerda"):
 			if not driftatv:
 				rotation.y += 1 * delta
@@ -71,7 +72,7 @@ func _physics_process(delta):
 				rotation.y -= 1 * delta
 			else:
 				rotation.y -= 2 * delta
-
+				
 	if Input.is_action_just_pressed("drift") and is_on_floor():
 		vlcMax = 10.0
 		velocity.y = 2.5
@@ -91,13 +92,22 @@ func _physics_process(delta):
 		
 	if tempo_drift > 3 and not driftatv:
 		boost = true
+		boost_tempo = 1.0
 		vlc = move_toward(boot_forca, boot_forca, 20)
 		vlc = move_toward(vlc, vlcMax, aceleracao * delta)
 		tempo_drift = 0
-		boost = false
 	elif drift > 0 and not driftatv:
 		tempo_drift = 0
 		vlcMax = 15.0
+		
+	if boost:
+		boost_tempo -= delta
+		vlc_linhas.visible = true
+		if boost_tempo <= 0:
+			vlc_linhas.visible = false
+			boost = false
+	else:
+		vlc_linhas.visible = false
 		
 	velocity.z = direcao_movimento.z * vlc
 	velocity.x = direcao_movimento.x * vlc

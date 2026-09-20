@@ -28,14 +28,11 @@ func _process(delta):
 		distancia = 1.5
 		altura = 1
 
-	# Verifica se o kart está fazendo drift
 	if alvo.driftatv:
-		# Ajusta o lado da câmera de acordo com a direção do drift
 		posicao_drift = alvo.direcao_kart.x * deslocamento_drift
 	else:
 		posicao_drift = 0.0
 
-	# Posição atrás do kart
 	var posicao_desejada = (
 		alvo.global_position
 		+ alvo.global_transform.basis.z * distancia
