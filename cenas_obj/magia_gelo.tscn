@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cud1uvkd58a2y"]
 
-[ext_resource type="Texture2D" uid="uid://cvvkvus0atpsi" path="res://sprites/gelo.png" id="1_ginwq"]
+[ext_resource type="Texture2D" uid="uid://cvvkvus0atpsi" path="res://sprites/Magias/gelo.png" id="1_ginwq"]
 [ext_resource type="Script" uid="uid://cg8dhdint5b82" path="res://scripts/magia_gelo.gd" id="1_qtf2j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bpqth"]
@@ -15,6 +15,7 @@ animations = [{
 }]
 
 [node name="gelo" type="MeshInstance3D" unique_id=1317919267]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_qtf2j")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1644279098]

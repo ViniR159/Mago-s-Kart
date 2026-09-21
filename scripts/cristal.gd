@@ -1,11 +1,8 @@
 extends MeshInstance3D
 
-const vlc = 20
 var tempo = 5
 
-
 func _process(delta: float) -> void:
-	position += -transform.basis.z * vlc * delta
 	tempo -= delta
 	if tempo <= 0:
 		queue_free()

@@ -1,6 +1,7 @@
 extends Control
 
 @onready var manatxt: Label = $container/manaCon/manatxt as Label
+@onready var voltastxt: Label = $container/voltas/voltastxt as Label
 @onready var player: CharacterBody3D = $"../../Player"
 
 
@@ -12,3 +13,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	manatxt.text = str(player.mana)
+	voltastxt.text = str(player.volta_atual)
+	

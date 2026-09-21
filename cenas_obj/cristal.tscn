@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bliotae1l1mra"]
+
+[ext_resource type="Texture2D" uid="uid://bfrb2rr37v23q" path="res://sprites/Magias/cristal (1).png" id="1_ktuxd"]
+[ext_resource type="Script" uid="uid://c8jp360tr7dyt" path="res://scripts/cristal.gd" id="1_woaxb"]
+[ext_resource type="Texture2D" uid="uid://diby6srrd8duu" path="res://sprites/Magias/cristal (2).png" id="2_woaxb"]
+[ext_resource type="Texture2D" uid="uid://dokopxam54gb3" path="res://sprites/Magias/cristal (3).png" id="3_ylp83"]
+[ext_resource type="Texture2D" uid="uid://c8f0jm6thptc7" path="res://sprites/Magias/cristal (4).png" id="4_w7hex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bpqth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ktuxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_woaxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ylp83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w7hex")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="cristal" type="MeshInstance3D" unique_id=1317919267]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_woaxb")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1644279098]
+modulate = Color(1, 1, 1, 0.39215687)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_bpqth")
+frame_progress = 0.2048233
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2049235881]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1075250099]

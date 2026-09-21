@@ -1,0 +1,30 @@
+{
+	"basico": {
+		"vlcMax" : 10.0,
+		"aceleracao" : 5.0,
+		"freiagem" : 10.0,
+		"drift" : 0.5,
+		"boost_forca" : 20
+	},
+	"velocidade": {
+		"vlcMax" : 15.0,
+		"aceleracao" : 5.0,
+		"freiagem" : 15.0,
+		"drift" : 0.5,
+		"boost_forca" : 20
+	},
+	"aceleracao": {
+		"vlcMax" : 10.0,
+		"aceleracao" : 9.0,
+		"freiagem" : 10.0,
+		"drift" : 0.5,
+		"boost_forca" : 35
+	},
+	"drift": {
+		"vlcMax" : 10.0,
+		"aceleracao" : 5.0,
+		"freiagem" : 15.0,
+		"drift" : 1,
+		"boost_forca" : 20
+	}
+}

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de7j5b1ycolyt"
-path.s3tc="res://.godot/imported/Marco.png-f7a8c4c70a8033e8da917556fb612ead.s3tc.ctex"
+uid="uid://dkjuyr3kftvsc"
+path.s3tc="res://.godot/imported/Marco Dir.png-3c7ccfda9ca7bc98392e19e283c9797c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/Marco.png"
-dest_files=["res://.godot/imported/Marco.png-f7a8c4c70a8033e8da917556fb612ead.s3tc.ctex"]
+source_file="res://sprites/Marco/Marco Dir.png"
+dest_files=["res://.godot/imported/Marco Dir.png-3c7ccfda9ca7bc98392e19e283c9797c.s3tc.ctex"]
 
 [params]
 

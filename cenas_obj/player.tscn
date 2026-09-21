@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://wvp1y0d53q16" path="res://scripts/character_body_3d.gd" id="1_onrkg"]
 [ext_resource type="Shader" uid="uid://cfsb2snuaqr7t" path="res://linhas.gdshader" id="2_5mc68"]
-[ext_resource type="Texture2D" uid="uid://de7j5b1ycolyt" path="res://sprites/Marco.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://drywpkrdrr81o" path="res://sprites/Marco/Marco.png" id="2_i3pqv"]
 [ext_resource type="Script" uid="uid://b3mbp13hlyvrn" path="res://scripts/camera_3d.gd" id="2_n34jo"]
+[ext_resource type="Texture2D" uid="uid://dkjuyr3kftvsc" path="res://sprites/Marco/Marco Dir.png" id="3_pe84q"]
+[ext_resource type="Texture2D" uid="uid://bcety2vxr75wv" path="res://sprites/Marco/Marco Esq.png" id="4_ua1nu"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pe84q"]
 
@@ -30,10 +32,16 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_i3pqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pe84q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ua1nu")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 0.0
 }]
 
 [node name="Player" type="CharacterBody3D" unique_id=1150610401]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvkvus0atpsi"
-path.s3tc="res://.godot/imported/gelo.png-b20275ac91558c6aad35878895a4cf4a.s3tc.ctex"
+uid="uid://diby6srrd8duu"
+path.s3tc="res://.godot/imported/cristal (2).png-bff54898951acc222ddf9d2bb104cda0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/gelo.png"
-dest_files=["res://.godot/imported/gelo.png-b20275ac91558c6aad35878895a4cf4a.s3tc.ctex"]
+source_file="res://sprites/Magias/cristal (2).png"
+dest_files=["res://.godot/imported/cristal (2).png-bff54898951acc222ddf9d2bb104cda0.s3tc.ctex"]
 
 [params]
 

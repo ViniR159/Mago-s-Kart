@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bm4kfwbxk65yk"]
+
+[ext_resource type="Script" uid="uid://ceq5etjnwleu8" path="res://scripts/bot.gd" id="1_ewyra"]
+[ext_resource type="Texture2D" uid="uid://drywpkrdrr81o" path="res://sprites/Marco/Marco.png" id="3_kjhrq"]
+[ext_resource type="Texture2D" uid="uid://dkjuyr3kftvsc" path="res://sprites/Marco/Marco Dir.png" id="4_jk8kp"]
+[ext_resource type="Texture2D" uid="uid://bcety2vxr75wv" path="res://sprites/Marco/Marco Esq.png" id="5_t6bff"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wuvc2"]
+size = Vector3(0.29763412, 0.37357053, 0.16870117)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wuvc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kjhrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jk8kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t6bff")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="Bot" type="CharacterBody3D" unique_id=1150610401 groups=["bot"]]
+script = ExtResource("1_ewyra")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1006605720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0008678436, -0.017673835, 0)
+shape = SubResource("BoxShape3D_wuvc2")
+debug_color = Color(0.5868931, 0.4565156, 0.80029374, 0.41960785)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=981816904]
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_wuvc2")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=335434505]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=881671694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017356873, -0.03534767, 0)
+shape = SubResource("BoxShape3D_wuvc2")
+debug_color = Color(0.5868931, 0.4565156, 0.80029374, 0.41960785)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=291317105]
+
+[node name="RayCast3D" type="RayCast3D" parent="Node3D" unique_id=612784458]
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
