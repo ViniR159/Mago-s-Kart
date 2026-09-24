@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0nj578xmkdtj"]
 
-[ext_resource type="Texture2D" uid="uid://bxcojfmpyy0t2" path="res://sprites/mana.png" id="1_7630s"]
+[ext_resource type="Texture2D" uid="uid://bxcojfmpyy0t2" path="res://sprites/Magias/mana.png" id="1_7630s"]
+[ext_resource type="Script" uid="uid://bly0yxasrjm7f" path="res://scripts/mana_obj.gd" id="1_mi6hm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cktba"]
 animations = [{
@@ -14,10 +15,11 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wuvc2"]
-size = Vector3(0.35180664, 0.30291748, 0.32873535)
+size = Vector3(0.35180664, 0.30291748, 1.999588)
 
 [node name="manaObj" type="MeshInstance3D" unique_id=650729004 groups=["Mana"]]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_mi6hm")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=409506906 groups=["Mana"]]
 billboard = 1
@@ -28,6 +30,6 @@ sprite_frames = SubResource("SpriteFrames_cktba")
 [node name="Area3D" type="Area3D" parent="." unique_id=903581836 groups=["Mana"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=92926546 groups=["Mana"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025634766, -0.020477295, 0.0071411133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025634766, -0.020477297, 0.011405946)
 visibility_parent = NodePath("../../AnimatedSprite3D")
 shape = SubResource("BoxShape3D_wuvc2")

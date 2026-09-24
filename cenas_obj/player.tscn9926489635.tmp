@@ -144,10 +144,10 @@ sprite_frames = SubResource("SpriteFrames_05lox")
 frame_progress = 0.6604932
 
 [node name="falas" type="Label3D" parent="." unique_id=283128164]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2320235, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20301479, 0)
 text = "BOLA DE FOGO"
 font = SubResource("FontVariation_wuvc2")
 font_size = 10
-outline_size = 5
+outline_size = 0
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

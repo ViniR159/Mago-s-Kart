@@ -15,9 +15,6 @@ func _ready():
 
 			var posicao = to_global(map_to_local(cell))
 
-			# Diminui a altura do gerador
 			posicao.y -= 0.8
 
 			geradorobj.global_position = posicao
-
-			geradorobj.scale = Vector3(0.5, 0.1, 0.5)

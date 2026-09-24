@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://t1biodwnktsr"]
+
+[ext_resource type="Script" uid="uid://627ppxx6frc8" path="res://scripts/temp.gd" id="1_oortg"]
+[ext_resource type="Texture2D" uid="uid://chfd3l8hcoot8" path="res://sprites/Magias/fogo.png" id="2_jwrx5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7amqd"]
+atlas = ExtResource("2_jwrx5")
+region = Rect2(0, 0, 36, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45xds"]
+atlas = ExtResource("2_jwrx5")
+region = Rect2(0, 18, 36, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckg4l"]
+atlas = ExtResource("2_jwrx5")
+region = Rect2(0, 36, 36, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3swcf"]
+atlas = ExtResource("2_jwrx5")
+region = Rect2(0, 54, 36, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bpqth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7amqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45xds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckg4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3swcf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="mini_fogo" type="MeshInstance3D" unique_id=1317919267]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+script = ExtResource("1_oortg")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1644279098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0823493, 0, 0.17924064)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_bpqth")
+frame_progress = 0.02263938
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2049235881]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1075250099]
