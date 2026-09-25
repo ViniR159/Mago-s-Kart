@@ -8,6 +8,7 @@ var categorias
 @onready var confusao_sprites = $confusao
 @onready var area = $Area3D
 @onready var falastxt = $falas
+@onready var mira = $mira
 
 
 var gravidade = 15
@@ -78,7 +79,7 @@ func _physics_process(delta):
 		velocity.y -= gravidade * delta
 	
 	
-	driftatv = Input.is_action_pressed("drift") and !tile == 1
+	driftatv = Input.is_action_pressed("drift")
 	
 	if tempo_effect <= 0:
 		effect = ""
@@ -150,9 +151,10 @@ func _physics_process(delta):
 			drift * delta
 		)
 		tempo_drift += delta
-
+		mira.visible = true
 	else:
 		direcao_movimento = direcao_kart
+		mira.visible = false
 		
 	if tempo_drift > 3 and not driftatv:
 		boost = true
@@ -269,6 +271,7 @@ func spawn(magias, tipo) -> void:
 	magia.global_rotation = global_rotation
 	
 	
+@warning_ignore("shadowed_variable")
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("Mana"):
 		mana += 30

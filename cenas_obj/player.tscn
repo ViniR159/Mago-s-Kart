@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dkjuyr3kftvsc" path="res://sprites/Marco/Marco Dir.png" id="3_pe84q"]
 [ext_resource type="Texture2D" uid="uid://bcety2vxr75wv" path="res://sprites/Marco/Marco Esq.png" id="4_ua1nu"]
 [ext_resource type="Texture2D" uid="uid://bl5nq8sa1cevl" path="res://sprites/confusao.png" id="7_0dt4e"]
+[ext_resource type="Texture2D" uid="uid://c5sb1vyky05mg" path="res://sprites/mira.png" id="8_ly856"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pe84q"]
 
@@ -97,6 +98,17 @@ animations = [{
 
 [sub_resource type="FontVariation" id="FontVariation_wuvc2"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_cktba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ly856")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody3D" unique_id=1150610401]
 script = ExtResource("1_onrkg")
 
@@ -149,5 +161,11 @@ text = "BOLA DE FOGO"
 font = SubResource("FontVariation_wuvc2")
 font_size = 10
 outline_size = 5
+
+[node name="mira" type="AnimatedSprite3D" parent="." unique_id=1317121847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8579871)
+visible = false
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_cktba")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
